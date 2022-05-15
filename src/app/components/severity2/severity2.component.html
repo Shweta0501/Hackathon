@@ -1,0 +1,29 @@
+<select [(ngModel)]="selectedOption" (ngModelChange)="Category()"  style="margin-left: 100px;">
+    <!-- <option>Select</option> -->
+    <option *ngFor="let cat of cat1" [value]="cat.category">
+      {{ cat.category }}
+    </option>
+  </select>
+  <br />
+  
+  <!-- <select [(ngModel)]="selectedOption1" (ngModelChange)="Category()"  style="margin-left: 20px;">
+    <option *ngFor="let cat of cat2" [value]="cat">{{ cat }}</option>
+  </select>
+  <br /> -->
+  <button (click)="AddCategory()"  style="margin-left: 100px;">Add</button>
+  
+  <br />
+  <br />
+  
+  <table border="1" style="margin-left: 700px; margin-top: -80px;">
+    <tr>
+      <th>Sno.</th>
+      <th>Options</th>
+      <!-- <th>No. Of Vouchers</th> -->
+    </tr>
+    <tr *ngFor="let td of tableData; let i = index">
+      <td>{{ i + 1 }}</td>
+      <td>{{ td.catname }}</td>
+      <!-- <td>{{ td.noOfemp }}</td> -->
+    </tr>
+  </table>
